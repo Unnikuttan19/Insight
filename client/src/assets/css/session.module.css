@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  background: linear-gradient(to bottom, rgb(253, 250, 250), #4a148c);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.addSectionCard, .sessionsListCard {
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  box-shadow: 0 10px 10px #4a148c;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+
+}
+
+.plusIcon {
+  font-size: 2rem;
+  color: #bec7d4;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.plusIcon:hover {
+  color: #434344;
+}
+
+.fontHead h5 {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.fontHead h6 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-around;
+}
+
+.trashIcon {
+  font-size: 1.2rem;
+  color: #bec7d4;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.trashIcon:hover {
+  color: red;
+}
+
+.editIcon {
+  font-size: 1.2rem;
+  color: #bec7d4;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.viewIcon {
+  font-size: 1.2rem;
+  color: #bec7d4;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buttonDisplay {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actionButtonStart,
+.actionButtonEnd {
+  padding: auto;
+  margin: auto;
+  background: rgb(127, 24, 200);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  width: 80px;
+  height: 45px;
+  color: #fff;
+}
+
+.actionButtonStart:hover {
+  background: rgb(170, 79, 235);
+}
+
+.actionButtonEnd:hover {
+  background: #dcd6d6;
+}
+
+.activeBadge {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.editIcon:hover {
+  color: #4a148c;
+}
+
+.viewIcon:hover {
+  color: #4a148c;
+}
+
+.activeBadge {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.endedBadge {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+
+/* Small screens (mobile devices) */
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .plusIcon {
+    font-size: 1.5rem;
+  }
+
+  .TrashIcon {
+    font-size: 1rem;
+  }
+
+  .fontHead h5,
+  .fontHead h6 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plusIcon {
+    font-size: 1.8rem;
+  }
+
+  .TrashIcon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 901px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra Large screens (larger desktops) */
+@media (min-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);  /* Display 4 columns */
+  }
+}

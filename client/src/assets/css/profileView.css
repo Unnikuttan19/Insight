@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border- box;
+}
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.main-container .image-container{
+    width: 40%;
+    
+}
+.main-container .image-container div{
+    height: 100%;
+    width: 100%;
+}
+
+.main-container .contents{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
